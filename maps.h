@@ -1,6 +1,10 @@
 #ifndef MAPS_H
 #define MAPS_H
 
+#include <QString>
+
+#include <map>
+
 namespace maps {
 
 static std::map<QString, int> units =
@@ -74,6 +78,24 @@ static std::map<int, QString> slava =
     {900, "Ц"}
 };
 
+}
+
+namespace Errors
+{
+    enum ErrorCodes
+    {
+        NO_ERROR = 1,
+        EMPTY_STRING = 2,
+        ONE_DIGIT_NUMBERS = 3,
+        NOT_FOUND = 4,
+        OTHERS_NEXT_TO_UNITS = 5,
+        NO_ONE_AFTER_TENS = 6,
+        NO_ONE_AFTER_TENS_PLUS = 7,
+        UNITS_BEFORE_UND = 8,
+        TENS_AFTER_UND = 9,
+        JUST_ONE_TIME = 10,
+        BULLSHIT = -1
+    };
 }
 
 #endif // MAPS_H
