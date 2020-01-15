@@ -5,6 +5,8 @@
 #include <QString>
 #include <QVector>
 
+#include "transform.h"
+
 namespace Ui {
 class MainWindow;
 }
@@ -18,9 +20,6 @@ public:
     ~MainWindow();
 
     void error_nf(QString word);
-    std::tuple<int, QString> error(QVector<QString> &input);
-    void slav(int &arab);
-
 
 private slots:
 
